@@ -184,6 +184,7 @@ public class JogoVelha extends Jogador{
 					matrizXO[i][j]=null;
 				}
 			}
+			contagemJogo=1;
 			return "J1";
 		}else if (pontuacaoJogador1<pontuacaoJogador2){
 			for (int i=0;i<3;i++) {
@@ -191,6 +192,7 @@ public class JogoVelha extends Jogador{
 					matrizXO[i][j]=null;
 				}
 			}
+			contagemJogo=1;
 			return "J2";
 		}else {
 			for (int i=0;i<3;i++) {
@@ -198,6 +200,7 @@ public class JogoVelha extends Jogador{
 					matrizXO[i][j]=null;
 				}
 			}
+			contagemJogo=1;
 			return "Empate";
 		}
 	}
