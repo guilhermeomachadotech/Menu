@@ -157,7 +157,7 @@ public class AppJogoDaVelha extends JDialog{
 		painelJogador1.add(txNomeJogador1);
 		
 		lbEscolheOpcao1=new JLabel();
-		lbEscolheOpcao1.setText("Escolha sua opção:");
+		lbEscolheOpcao1.setText("Escolha sua opÃ§Ã£o:");
 		lbEscolheOpcao1.setForeground(corTexto);
 		lbEscolheOpcao1.setFont(fontLabel);
 		lbEscolheOpcao1.setBounds(10,60, 190, 20);
@@ -274,7 +274,7 @@ public class AppJogoDaVelha extends JDialog{
 		painelJogador2.add(txNomeJogador2);
 		
 		lbEscolheOpcao2=new JLabel();
-		lbEscolheOpcao2.setText("Escolha sua opção:");
+		lbEscolheOpcao2.setText("Escolha sua opÃ§Ã£o:");
 		lbEscolheOpcao2.setForeground(corTexto);
 		lbEscolheOpcao2.setFont(fontLabel);
 		lbEscolheOpcao2.setBounds(10,60, 190, 20);
@@ -376,7 +376,6 @@ public class AppJogoDaVelha extends JDialog{
 		
 		btJogada11=new JButton();
 		btJogada11.setBounds(10,10,70,70);
-		btJogada11.setBackground(Color.WHITE);
 		BotaoJogada btJog11=new BotaoJogada(0,0);
 		btJogada11.addActionListener(btJog11);
 		painelJogoDaVelha.add(btJogada11);
@@ -509,7 +508,7 @@ public class AppJogoDaVelha extends JDialog{
 		painelJogoDaVelha.add(btResetarJogo);
 		
 		lbVencedor =new JLabel();
-		lbVencedor.setBounds(250, 400, 300, 20);
+		lbVencedor.setBounds(300, 400, 300, 20);
 		lbVencedor.setFont(fontLabel);
 		lbVencedor.setForeground(corTexto);
 		lbVencedor.setVisible(false);
@@ -521,13 +520,13 @@ public class AppJogoDaVelha extends JDialog{
 		painelJogoDaVelha.add(lbImgVencedor);
 		
 		lbPontuacaoVencedor =new JLabel();
-		lbPontuacaoVencedor.setBounds(240, 430, 200, 20);
+		lbPontuacaoVencedor.setBounds(300, 430, 200, 20);
 		lbPontuacaoVencedor.setFont(fontLabel);
 		lbPontuacaoVencedor.setForeground(corTexto);
 		lbPontuacaoVencedor.setVisible(false);
 		
 		painelJogoDaVelha.add(lbPontuacaoVencedor);
-		tabbledpane.addTab("Jogo da Velha",null, painelJogoDaVelha, "Execusão do jogo");
+		tabbledpane.addTab("Jogo da Velha",null, painelJogoDaVelha, "ExecusÃ£o do jogo");
 		janelacalc.add(tabbledpane);
 	}
 	private class BotaoEscolherFoto implements ActionListener{
@@ -577,7 +576,7 @@ public class AppJogoDaVelha extends JDialog{
 			if(numJogador==1) {
 				jogador1.setNomeJogador(txNomeJogador1.getText());
 				jogoVelha.setNomeJogador1(jogador1.getNomeJogador());
-				lbNomeJogador1JogoVelha.setText("Jogador N°1: "+jogador1.getNomeJogador());
+				lbNomeJogador1JogoVelha.setText("Jogador NÂ°1: "+jogador1.getNomeJogador());
 				lbSuaVezJ1.setText("Sua vez, "+jogador1.getNomeJogador());
 				if(rdXJogador1.isSelected()) {
 					jogador1.setOpcaoJogador("X");
@@ -632,11 +631,11 @@ public class AppJogoDaVelha extends JDialog{
 					imgPeter.setImage(imgPeter.getImage().getScaledInstance(lbImgJ1.getWidth(),lbImgJ1.getHeight(),1));
 					lbImgJ1.setIcon(imgPeter);
 				}
-				JOptionPane.showMessageDialog(null,"Nome do Jogador N° 1: "+jogador1.getNomeJogador()+"\nEscolha feita: "+jogador1.getOpcaoJogador()+"\nFoto do Jogador: "+fotoJogador,"Jogador N° 1",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null,"Nome do Jogador NÂ° 1: "+jogador1.getNomeJogador()+"\nEscolha feita: "+jogador1.getOpcaoJogador()+"\nFoto do Jogador: "+fotoJogador,"Jogador NÂ° 1",JOptionPane.INFORMATION_MESSAGE);
 			}else {
 				jogador2.setNomeJogador(txNomeJogador2.getText());
 				jogoVelha.setNomeJogador2(jogador2.getNomeJogador());
-				lbNomeJogador2JogoVelha.setText("Jogador N°2: "+jogador2.getNomeJogador());
+				lbNomeJogador2JogoVelha.setText("Jogador NÂ°2: "+jogador2.getNomeJogador());
 				lbSuaVezJ2.setText("Sua vez, "+jogador2.getNomeJogador());
 				if(rdXJogador2.isSelected()) {
 					jogador2.setOpcaoJogador("X");
@@ -691,7 +690,7 @@ public class AppJogoDaVelha extends JDialog{
 					imgPeter.setImage(imgPeter.getImage().getScaledInstance(lbImgJ2.getWidth(),lbImgJ2.getHeight(),1));
 					lbImgJ2.setIcon(imgPeter);
 				}
-				JOptionPane.showMessageDialog(null,"Nome do Jogador N° 2: "+jogador2.getNomeJogador()+"\nEscolha feita: "+jogador2.getOpcaoJogador()+"\nFoto do Jogador: "+fotoJogador,"Jogador N° 2",JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null,"Nome do Jogador NÂ° 2: "+jogador2.getNomeJogador()+"\nEscolha feita: "+jogador2.getOpcaoJogador()+"\nFoto do Jogador: "+fotoJogador,"Jogador NÂ° 2",JOptionPane.INFORMATION_MESSAGE);
 			}
 			
 		}
@@ -704,20 +703,17 @@ public class AppJogoDaVelha extends JDialog{
 			this.coluna=coluna;
 		}
 		public void actionPerformed (ActionEvent evento) {
-			numJogadas=jogoVelha.getContagemJogo();
-			if(numJogadas==1) {
+			
+			if(jogoVelha.getContagemJogo()==1) {
 				jogoVelha.resetarJogo();
 				for(int i=0;i<3;i++) {
-					for(int j=0;j<3;j++) {
+					for (int j=0;j<3;j++) {
 						matrizBotoesJogada[i][j].setIcon(null);
 					}
 				}
-				lbSuaVezJ1.setVisible(true);
-				lbSuaVezJ2.setVisible(false);
-				
 			}
 			validarOpcaoJogador=jogoVelha.fazerJogada(linha, coluna);
-			
+			numJogadas=jogoVelha.getContagemJogo();
 			
 			if(numJogadas%2!=0) {
 				lbSuaVezJ1.setVisible(true);
@@ -730,7 +726,7 @@ public class AppJogoDaVelha extends JDialog{
 			for(int i=0; i<3; i++) {
 				for (int j=0;j<3;j++) {
 					if (i==linha && j==coluna) {
-						if(validarOpcaoJogador==jogoVelha.getOpcaoJ1()) {
+						if(validarOpcaoJogador=="X") {
 							imgX.setImage(imgX.getImage().getScaledInstance(matrizBotoesJogada[linha][coluna].getWidth(),matrizBotoesJogada[linha][coluna].getHeight(),1));
 							matrizBotoesJogada[linha][coluna].setIcon(imgX);
 							matrizBotoesJogada[linha][coluna].setEnabled(false);
@@ -754,14 +750,18 @@ public class AppJogoDaVelha extends JDialog{
 				}
 				lbSuaVezJ1.setVisible(true);
 				lbSuaVezJ2.setVisible(false);
-				lbPontuacaoJ1.setText("Pontuação: "+jogoVelha.getPontuacaoJogador1());
-				lbPontuacaoJ2.setText("Pontuação: "+jogoVelha.getPontuacaoJogador2());
-			}else{
-				if(jogoVelha.getContagemJogo()==10) {
-					JOptionPane.showMessageDialog(null,"Deu empate","Resultado",JOptionPane.INFORMATION_MESSAGE);
-					lbSuaVezJ1.setVisible(true);
-					lbSuaVezJ2.setVisible(false);
+				lbPontuacaoJ1.setText("PontuaÃ§Ã£o: "+jogoVelha.getPontuacaoJogador1());
+				lbPontuacaoJ2.setText("PontuaÃ§Ã£o: "+jogoVelha.getPontuacaoJogador2());
+			}else if(resultado==null && jogoVelha.getContagemJogo()==10){
+				JOptionPane.showMessageDialog(null,"Deu empate","Resultado",JOptionPane.INFORMATION_MESSAGE);
+				for(int i=0;i<3;i++) {
+					for(int j=0;j<3;j++) {
+						matrizBotoesJogada[i][j].setEnabled(true);
+					}
 				}
+				jogoVelha.setContagemJogo(1);
+				lbSuaVezJ1.setVisible(true);
+				lbSuaVezJ2.setVisible(false);
 			}
 				
 			
@@ -776,27 +776,29 @@ public class AppJogoDaVelha extends JDialog{
 			if(verificarVitoria=="J1") {
 				lbVencedor.setText(jogador1.getNomeJogador()+" Ganhou o jogo!!!");
 				lbVencedor.setVisible(true);
-				lbPontuacaoVencedor.setText("Pontuacao atingida: "+jogoVelha.getPontuacaoJogador1());
+				lbPontuacaoVencedor.setText("Pontuacao: "+jogoVelha.getPontuacaoJogador1());
 				lbPontuacaoVencedor.setVisible(true);
 				lbImgVencedor.setIcon(lbImgJ1.getIcon());
 				lbImgVencedor.setVisible(true);
 			}else if(verificarVitoria=="J2"){
 				lbVencedor.setText(jogador2.getNomeJogador()+" Ganhou o jogo!!!");
 				lbVencedor.setVisible(true);
-				lbPontuacaoVencedor.setText("Pontuacao atingida: "+jogoVelha.getPontuacaoJogador1());
+				lbPontuacaoVencedor.setText("Pontuacao: "+jogoVelha.getPontuacaoJogador2());
 				lbPontuacaoVencedor.setVisible(true);
 				lbImgVencedor.setIcon(lbImgJ2.getIcon());
 				lbImgVencedor.setVisible(true);
 			}else {
 				lbVencedor.setText("Houve Empate!!!");
 				lbVencedor.setVisible(true);
+				lbPontuacaoVencedor.setVisible(false);
+				lbImgVencedor.setVisible(false);
 			}
 			lbSuaVezJ1.setVisible(true);
 			lbSuaVezJ2.setVisible(false);
 			jogoVelha.setPontuacaoJogador1(0);
 			jogoVelha.setPontuacaoJogador2(0);
-			lbPontuacaoJ1.setText("Pontuação: "+jogoVelha.getPontuacaoJogador1());
-			lbPontuacaoJ2.setText("Pontuação: "+jogoVelha.getPontuacaoJogador2());
+			lbPontuacaoJ1.setText("PontuaÃ§Ã£o: "+jogoVelha.getPontuacaoJogador1());
+			lbPontuacaoJ2.setText("PontuaÃ§Ã£o: "+jogoVelha.getPontuacaoJogador2());
 		}
 	}
 	private class BotaoResetarJogo implements ActionListener{
