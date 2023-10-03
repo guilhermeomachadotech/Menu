@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 public class AppJogoDaVelha extends JDialog{
+	JTabbedPane tabbledpane;
 	ImageIcon imgX;
 	ImageIcon imgMiles;
 	ImageIcon imgGwen;
@@ -13,6 +14,9 @@ public class AppJogoDaVelha extends JDialog{
 	ImageIcon imgGwenPerfil;
 	ImageIcon imgPeterPerfil;
 	ImageIcon imgMiguelPerfil;
+	ImageIcon imgTemplateJogoVelha;
+	
+	JLabel lbImgJogoVelha;
 	
 	JLabel lbNomeJogador1;
 	JLabel lbNomeJogador2;
@@ -71,6 +75,7 @@ public class AppJogoDaVelha extends JDialog{
 	JButton btConfirmar1;
 	JButton btConfirmar2;
 	
+	
 	JButton btJogada11;
 	JButton btJogada12;
 	JButton btJogada13;
@@ -117,6 +122,8 @@ public class AppJogoDaVelha extends JDialog{
 		imgPeterPerfil=new ImageIcon(getClass().getResource("./imagens/iconPeter.png"));
 		imgMiguelPerfil=new ImageIcon(getClass().getResource("./imagens/iconMiguelOhara.png"));;
 		
+		imgTemplateJogoVelha=new ImageIcon(getClass().getResource("./imagens/templateJogoVelha.png"));
+		
 		corFundo=new Color(20,146,179);
 		corFundoBotao=new Color(88,18,10);
 		corTexto=new Color(88,18,10);
@@ -138,7 +145,7 @@ public class AppJogoDaVelha extends JDialog{
 		setLocationRelativeTo(janelacalc);
 		janelacalc.setLayout(null);
 		
-		JTabbedPane tabbledpane=new JTabbedPane();
+		tabbledpane=new JTabbedPane();
 		tabbledpane.setBounds(0,0,800,600);
 		
 		//Painel do jogador 1:
@@ -375,68 +382,92 @@ public class AppJogoDaVelha extends JDialog{
 		painelJogoDaVelha.setBackground(corFundo);
 		
 		btJogada11=new JButton();
-		btJogada11.setBounds(10,10,70,70);
+		btJogada11.setBounds(10,10,60,60);
+		btJogada11.setBackground(corFundo);
 		BotaoJogada btJog11=new BotaoJogada(0,0);
 		btJogada11.addActionListener(btJog11);
+		btJogada11.setEnabled(false);
 		painelJogoDaVelha.add(btJogada11);
 		matrizBotoesJogada[0][0]=btJogada11;
 		
 		
 		btJogada12=new JButton();
-		btJogada12.setBounds(90,10,70,70);
+		btJogada12.setBounds(90,10,60,60);
+		btJogada12.setBackground(corFundo);
 		BotaoJogada btJog12=new BotaoJogada(0,1);
 		btJogada12.addActionListener(btJog12);
+		btJogada12.setEnabled(false);
 		painelJogoDaVelha.add(btJogada12);
 		matrizBotoesJogada[0][1]=btJogada12;
 		
 		btJogada13=new JButton();
-		btJogada13.setBounds(170,10,70,70);
+		btJogada13.setBounds(170,10,60,60);
+		btJogada13.setEnabled(false);
+		btJogada13.setBackground(corFundo);
 		BotaoJogada btJog13=new BotaoJogada(0,2);
 		btJogada13.addActionListener(btJog13);
 		matrizBotoesJogada[0][2]=btJogada13;
 		painelJogoDaVelha.add(btJogada13);
 		
 		btJogada21=new JButton();
-		btJogada21.setBounds(10,90,70,70);
+		btJogada21.setBounds(10,90,60,60);
+		btJogada21.setBackground(corFundo);
 		BotaoJogada btJog21=new BotaoJogada(1,0);
+		btJogada21.setEnabled(false);
 		btJogada21.addActionListener(btJog21);
 		matrizBotoesJogada[1][0]=btJogada21;
 		painelJogoDaVelha.add(btJogada21);
 		
 		btJogada22=new JButton();
-		btJogada22.setBounds(90,90,70,70);
+		btJogada22.setBounds(90,90,60,60);
+		btJogada22.setBackground(corFundo);
 		BotaoJogada btJog22=new BotaoJogada(1,1);
+		btJogada22.setEnabled(false);
 		btJogada22.addActionListener(btJog22);
 		matrizBotoesJogada[1][1]=btJogada22;
 		painelJogoDaVelha.add(btJogada22);
 		
 		btJogada23=new JButton();
-		btJogada23.setBounds(170,90,70,70);
+		btJogada23.setBounds(170,90,60,60);
+		btJogada23.setBackground(corFundo);
+		btJogada23.setEnabled(false);
 		BotaoJogada btJog23=new BotaoJogada(1,2);
 		btJogada23.addActionListener(btJog23);
 		matrizBotoesJogada[1][2]=btJogada23;
 		painelJogoDaVelha.add(btJogada23);
 		
 		btJogada31=new JButton();
-		btJogada31.setBounds(10,170,70,70);
+		btJogada31.setBounds(10,170,60,60);
+		btJogada31.setBackground(corFundo);
+		btJogada31.setEnabled(false);
 		BotaoJogada btJog31=new BotaoJogada(2,0);
 		btJogada31.addActionListener(btJog31);
 		matrizBotoesJogada[2][0]=btJogada31;
 		painelJogoDaVelha.add(btJogada31);
 		
 		btJogada32=new JButton();
-		btJogada32.setBounds(90,170,70,70);
+		btJogada32.setBounds(90,170,60,60);
+		btJogada32.setBackground(corFundo);
+		btJogada32.setEnabled(false);
 		BotaoJogada btJog32=new BotaoJogada(2,1);
 		btJogada32.addActionListener(btJog32);
 		matrizBotoesJogada[2][1]=btJogada32;
 		painelJogoDaVelha.add(btJogada32);
 		
 		btJogada33=new JButton();
-		btJogada33.setBounds(170,170,70,70);
+		btJogada33.setBounds(170,170,60,60);
+		btJogada33.setBackground(corFundo);
+		btJogada33.setEnabled(false);
 		BotaoJogada btJog33=new BotaoJogada(2,2);
 		btJogada33.addActionListener(btJog33);
 		matrizBotoesJogada[2][2]=btJogada33;
 		painelJogoDaVelha.add(btJogada33);
+		
+		lbImgJogoVelha=new JLabel();
+		lbImgJogoVelha.setBounds(0,0,240,240);
+		imgTemplateJogoVelha.setImage(imgTemplateJogoVelha.getImage().getScaledInstance(lbImgJogoVelha.getWidth(), lbImgJogoVelha.getHeight(),1));
+		lbImgJogoVelha.setIcon(imgTemplateJogoVelha);
+		painelJogoDaVelha.add(lbImgJogoVelha);
 		
 		lbNomeJogador1JogoVelha=new JLabel();
 		lbNomeJogador1JogoVelha.setBounds(270, 40, 300,20);
@@ -495,17 +526,20 @@ public class AppJogoDaVelha extends JDialog{
 		btFinalizarJogo.setForeground(Color.WHITE);
 		btFinalizarJogo.setBackground(corFundoBotao);
 		btFinalizarJogo.addActionListener(btFJ);
+		btFinalizarJogo.setEnabled(false);
 		painelJogoDaVelha.add(btFinalizarJogo);
 		
 		BotaoResetarJogo btResetar=new BotaoResetarJogo();
 		btResetarJogo=new JButton();
 		btResetarJogo.setBounds(30,320,200,40);
-		btResetarJogo.setText("Resetar Rodada");
+		btResetarJogo.setText("Resetar Jogo");
 		btResetarJogo.setFont(fontBotao);
 		btResetarJogo.setForeground(Color.WHITE);
 		btResetarJogo.setBackground(corFundoBotao);
 		btResetarJogo.addActionListener(btResetar);
+		btResetarJogo.setEnabled(false);
 		painelJogoDaVelha.add(btResetarJogo);
+		
 		
 		lbVencedor =new JLabel();
 		lbVencedor.setBounds(300, 400, 300, 20);
@@ -585,7 +619,6 @@ public class AppJogoDaVelha extends JDialog{
 					rdXJogador2.setEnabled(false);
 					rdOJogador2.setEnabled(true);
 					rdOJogador1.setEnabled(true);
-					
 				}else {
 					jogador1.setOpcaoJogador("O");
 					jogoVelha.setOpcaoJ1(jogador1.getOpcaoJogador());
@@ -621,6 +654,7 @@ public class AppJogoDaVelha extends JDialog{
 					rdimgMiles1.setEnabled(true);
 					imgMiguel.setImage(imgMiguel.getImage().getScaledInstance(lbImgJ1.getWidth(),lbImgJ1.getHeight(),1));
 					lbImgJ1.setIcon(imgMiguel);
+					
 				}else {
 					fotoJogador="Peter B.Paker";
 					rdimgPeter1.setEnabled(false);
@@ -632,6 +666,8 @@ public class AppJogoDaVelha extends JDialog{
 					lbImgJ1.setIcon(imgPeter);
 				}
 				JOptionPane.showMessageDialog(null,"Nome do Jogador N° 1: "+jogador1.getNomeJogador()+"\nEscolha feita: "+jogador1.getOpcaoJogador()+"\nFoto do Jogador: "+fotoJogador,"Jogador N° 1",JOptionPane.INFORMATION_MESSAGE);
+				lbPontuacaoJ1.setVisible(true);
+				tabbledpane.setSelectedIndex(1);
 			}else {
 				jogador2.setNomeJogador(txNomeJogador2.getText());
 				jogoVelha.setNomeJogador2(jogador2.getNomeJogador());
@@ -641,56 +677,48 @@ public class AppJogoDaVelha extends JDialog{
 					jogador2.setOpcaoJogador("X");
 					jogoVelha.setOpcaoJ2(jogador2.getOpcaoJogador());
 					rdXJogador2.setEnabled(false);
-					rdXJogador1.setEnabled(false);
-					rdOJogador1.setEnabled(true);
-					rdOJogador2.setEnabled(true);
 					
 				}else {
 					jogador2.setOpcaoJogador("O");
 					jogoVelha.setOpcaoJ2(jogador2.getOpcaoJogador());
 					rdOJogador2.setEnabled(false);
 					rdOJogador1.setEnabled(false);
-					rdXJogador1.setEnabled(true);
-					rdXJogador2.setEnabled(true);
 				}
 				if(rdimgMiles2.isSelected()) {
 					fotoJogador="Miles Morales";
 					rdimgMiles1.setEnabled(false);
 					rdimgMiles2.setEnabled(false);
-					rdimgMiguel2.setEnabled(true);
-					rdimgPeter2.setEnabled(true);
-					rdimgGwen2.setEnabled(true);
 					imgMiles.setImage(imgMiles.getImage().getScaledInstance(lbImgJ2.getWidth(),lbImgJ2.getHeight(),1));
 					lbImgJ2.setIcon(imgMiles);
 				}else if(rdimgGwen2.isSelected()) {
 					fotoJogador="Gwen Stancy";
 					rdimgGwen1.setEnabled(false);
 					rdimgGwen2.setEnabled(false);
-					rdimgMiguel2.setEnabled(true);
-					rdimgPeter2.setEnabled(true);
-					rdimgMiles2.setEnabled(true);
 					imgGwen.setImage(imgGwen.getImage().getScaledInstance(lbImgJ2.getWidth(),lbImgJ2.getHeight(),1));
 					lbImgJ2.setIcon(imgGwen);
 				}else if(rdimgMiguel2.isSelected()) {
 					fotoJogador="Miguel O'Hara";
 					rdimgMiguel1.setEnabled(false);
 					rdimgMiguel2.setEnabled(false);
-					rdimgGwen2.setEnabled(true);
-					rdimgPeter2.setEnabled(true);
-					rdimgMiles2.setEnabled(true);
 					imgMiguel.setImage(imgMiguel.getImage().getScaledInstance(lbImgJ2.getWidth(),lbImgJ2.getHeight(),1));
 					lbImgJ2.setIcon(imgMiguel);
 				}else {
 					fotoJogador="Peter B.Paker";
 					rdimgPeter1.setEnabled(false);
 					rdimgPeter2.setEnabled(false);
-					rdimgGwen2.setEnabled(true);
-					rdimgMiguel2.setEnabled(true);
-					rdimgMiles2.setEnabled(true);
 					imgPeter.setImage(imgPeter.getImage().getScaledInstance(lbImgJ2.getWidth(),lbImgJ2.getHeight(),1));
 					lbImgJ2.setIcon(imgPeter);
 				}
 				JOptionPane.showMessageDialog(null,"Nome do Jogador N° 2: "+jogador2.getNomeJogador()+"\nEscolha feita: "+jogador2.getOpcaoJogador()+"\nFoto do Jogador: "+fotoJogador,"Jogador N° 2",JOptionPane.INFORMATION_MESSAGE);
+				lbPontuacaoJ2.setVisible(true);
+				for(int i=0;i<3;i++) {
+					for (int j=0;j<3;j++) {
+						matrizBotoesJogada[i][j].setEnabled(true);
+					}
+				}
+				btFinalizarJogo.setEnabled(true);
+				btResetarJogo.setEnabled(true);
+				tabbledpane.setSelectedIndex(2);
 			}
 			
 		}
@@ -810,8 +838,32 @@ public class AppJogoDaVelha extends JDialog{
 					matrizBotoesJogada[i][j].setEnabled(true);
 				}
 			}
-			lbSuaVezJ1.setVisible(true);
+			tabbledpane.setSelectedIndex(0);
+			rdXJogador1.setEnabled(true);
+			rdXJogador2.setEnabled(true);
+			rdOJogador1.setEnabled(true);
+			rdOJogador2.setEnabled(true);
+			rdimgMiles1.setEnabled(true);
+			rdimgMiles2.setEnabled(true);
+			rdimgGwen1.setEnabled(true);
+			rdimgGwen2.setEnabled(true);
+			rdimgMiguel1.setEnabled(true);
+			rdimgMiguel2.setEnabled(true);
+			rdimgPeter1.setEnabled(true);
+			rdimgPeter2.setEnabled(true);
+			lbImagemPefilJ1.setIcon(null);
+			lbNomeJogador1JogoVelha.setVisible(false);
+			lbNomeJogador2JogoVelha.setVisible(false);
+			lbImagemPefilJ2.setIcon(null);
+			lbImgJ1.setIcon(null);
+			lbImgJ2.setIcon(null);
+			lbPontuacaoJ1.setVisible(false);
+			lbPontuacaoJ2.setVisible(false);
+			lbSuaVezJ1.setVisible(false);
 			lbSuaVezJ2.setVisible(false);
+			lbImgVencedor.setVisible(false);
+			lbVencedor.setVisible(false);
+			lbPontuacaoVencedor.setVisible(false);
 		}
 	}
 }
